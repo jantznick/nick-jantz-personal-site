@@ -1,0 +1,9 @@
+#header {
+	display: flex;
+	justify-content: center;
+}
+
+.ascii-art {
+	font-family: monospace;
+	white-space: pre;
+}

@@ -7,3 +7,56 @@
 	font-family: monospace;
 	white-space: pre;
 }
+
+#menu {
+	width:50%;
+	margin: 0 auto 2rem;
+	display: flex;
+	justify-content: space-evenly;
+	text-transform: capitalize;
+}
+
+#menu,
+#content {
+	font-family: sans-serif;
+}
+
+.link-wrapper {
+	flex-grow: 1;
+	text-align: center;
+	padding: 1rem;
+}
+
+.link-text {
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.link-text:after {
+	content: '';
+	width: 100%;
+	background: black;
+	height: 0.25rem;
+	position: absolute;
+	bottom: -0.5rem;
+	left: 0;
+	transition-duration: 350ms;
+	transform: scaleX(0);
+}
+
+.link-wrapper:hover .link-text::after {
+	transform: scaleX(1);
+}
+
+#content {
+	width: 50%;
+	margin: 0 auto;
+	line-height: 1.5rem;
+	text-align: justify;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}

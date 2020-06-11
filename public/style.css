@@ -1,6 +1,7 @@
 #header {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .ascii-art {
@@ -20,6 +21,11 @@
 #content,
 #footer {
 	font-family: sans-serif;
+}
+
+.normal-header-text {
+	width: 100%;
+	text-align: center;
 }
 
 .link-wrapper {
@@ -46,8 +52,12 @@
 	transform: scaleX(0);
 }
 
-.link-wrapper:hover .link-text::after {
+a.link-wrapper:hover .link-text::after {
 	transform: scaleX(1);
+}
+
+.active {
+	font-weight: bold;
 }
 
 #content {
@@ -68,4 +78,10 @@ a {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	flex-wrap: wrap;
+}
+
+#login-link {
+	width: 100%;
+	margin-bottom: 1rem;
 }

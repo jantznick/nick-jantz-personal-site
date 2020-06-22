@@ -7,18 +7,18 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 
 const menu = [
-	{
-		name: 'Home',
-		link: '/'
-	},
-	{
-		name: 'Resume',
-		link: '/resume'
-	},
-	{
-		name: 'Contact',
-		link: '/contact'
-	}
+	// {
+	// 	name: 'Home',
+	// 	link: '/'
+	// },
+	// {
+	// 	name: 'Resume',
+	// 	link: '/resume'
+	// },
+	// {
+	// 	name: 'Contact',
+	// 	link: '/contact'
+	// }
 ]
 
 app.get("/", (req,res) => {

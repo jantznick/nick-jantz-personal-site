@@ -1,6 +1,6 @@
 <div id="menu">
 
-	<% menu.forEach(item => { %>
+	<% !!menu.length && menu.forEach(item => { %>
 		<% if (activePage !== item.name.toLowerCase()) {%>
 		<a class="link-wrapper" href="<%= item.link %>">
 			<span class="link-text">

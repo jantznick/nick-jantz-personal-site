@@ -25,7 +25,8 @@ body {
 #menu,
 #content,
 #footer,
-#contact {
+#contact,
+#projects {
 	font-family: sans-serif;
 }
 
@@ -93,7 +94,8 @@ a {
 	margin-bottom: 1rem;
 }
 
-#contact {
+#contact,
+#projects {
 	width: 50%;
 	margin: 0 auto;
 	line-height: 1.5rem;
@@ -137,6 +139,23 @@ a {
 
 .gutter-top {
 	margin-top: 1rem;
+}
+
+li.project {
+    list-style-type: none;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1% 2.5%;
+    width: 40%;
+}
+
+ul.Projects-list {
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
 }
 
 @media only screen and (max-width: 768px) {

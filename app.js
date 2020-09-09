@@ -6,6 +6,7 @@ const port = 3005;
 app.set("view engine","ejs");
 app.use(express.static("public"));
 
+
 const menu = [
 	// {
 	// 	name: 'Home',

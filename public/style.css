@@ -15,7 +15,7 @@ body {
 }
 
 #menu {
-	width:50%;
+	width: 50%;
 	margin: 0 auto 2rem;
 	display: flex;
 	justify-content: space-evenly;
@@ -26,7 +26,8 @@ body {
 #content,
 #footer,
 #contact,
-#projects {
+#projects,
+#companies {
 	font-family: sans-serif;
 }
 
@@ -95,7 +96,8 @@ a {
 }
 
 #contact,
-#projects {
+#projects,
+#companies {
 	width: 50%;
 	margin: 0 auto;
 	line-height: 1.5rem;
@@ -127,7 +129,7 @@ a {
 .download-resume {
 	text-transform: uppercase;
 	font-weight: bold;
-	border-bottom:3px solid black;
+	border-bottom: 3px solid black;
 }
 
 .link-icon {
@@ -141,21 +143,59 @@ a {
 	margin-top: 1rem;
 }
 
-li.project {
-    list-style-type: none;
-    border: 1px solid grey;
-    border-radius: 10px;
-    padding: 1em;
-    margin: 1% 2.5%;
-    width: 40%;
+.project {
+	list-style-type: none;
+	border: 1px solid grey;
+	border-radius: 10px;
+	padding: 1em;
+	margin: 1% 2.5%;
+	width: 40%;
+	flex: 0 0 auto;
+	min-height: 150px;
 }
 
-ul.Projects-list {
-    margin: 1em 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
+.Projects-list {
+	margin: 1em 0;
+	padding: 0;
+	border-radius: 5px;
+	display: flex;
+	justify-content: start;
+	overflow: scroll;
+	position: relative;
+	background:
+		linear-gradient(to right, white, rgba(0, 0, 0, 0)),
+		linear-gradient(to right, rgba(0, 0, 0, 0), white 80%) 0 100%,
+		linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0) 20%),
+		linear-gradient(to left,rgba(0, 0, 0, .6), rgba(0, 0, 0, 0) 20%);
+	background-attachment: local, local, scroll, scroll;
+}
+
+.Projects-list::-webkit-scrollbar {
+	display: none;
+}
+
+img.company-logo {
+	max-width: 100%;
+	filter: grayscale(1);
+	transition-duration: 350ms;;
+}
+
+.company-logo:hover {
+	filter: none;
+}
+
+.companies-list {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin: 1em;
+}
+
+.company {
+	max-width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -163,7 +203,9 @@ ul.Projects-list {
 		font-size: .875rem;
 	}
 
-	#content {
+	#content,
+	#projects,
+	#companies {
 		width: 85%;
 	}
 

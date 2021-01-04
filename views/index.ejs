@@ -15,9 +15,9 @@
 		</p>
 	</div>
 
-	<%- include('partials/projects') %>
+	<% if(hasProjects) { include('partials/projects') } %>
 
-	<%- include('partials/companies') %>
+	<% if(hasCompanies) { include('partials/companies') } %>
 
 	<%- include('partials/contact') %>
 

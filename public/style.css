@@ -22,12 +22,7 @@ body {
 	text-transform: capitalize;
 }
 
-#menu,
-#content,
-#footer,
-#contact,
-#projects,
-#companies {
+* {
 	font-family: sans-serif;
 }
 
@@ -97,7 +92,8 @@ a {
 
 #contact,
 #projects,
-#companies {
+#companies,
+#certifications {
 	width: 50%;
 	margin: 0 auto;
 	line-height: 1.5rem;
@@ -180,6 +176,19 @@ img.company-logo {
 	transition-duration: 350ms;;
 }
 
+img.cert-logo {
+	max-width: 100%;
+}
+
+.certs-list {
+	display: flex;
+	justify-content: center;
+}
+
+.cert {
+	max-width: 25%;
+}
+
 .company-logo:hover {
 	filter: none;
 }
@@ -193,6 +202,7 @@ img.company-logo {
 
 .company {
 	max-width: 25%;
+	min-width: 34%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -205,7 +215,8 @@ img.company-logo {
 
 	#content,
 	#projects,
-	#companies {
+	#companies,
+	#certifications {
 		width: 85%;
 	}
 

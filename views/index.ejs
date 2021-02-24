@@ -8,17 +8,29 @@
 			I currently work at <a href="https://www.footlocker.com/" target="_blank" class="in-text-link">Foot Locker</a><img src="/external-link.svg" class="link-icon"> as a Software Engineer Team Lead on the international team working to ensure the current site architecture can handle migrating all European sites over to a new platform built in React/Redux and running on an Express server.  In the past I have also worked to revamp the checkout process to increase customer conversion.
 		</p>
 		<p>
-			In past positions I have worked with AWS dev-ops tools and servers, Heroku build tools and Digital Ocean virtual machines. I am well versed in various build tools such as webpack as well as CI/CD tools such as Jenkins and the AWS Code Pipeline platform. I have also worked with prebuilt and custom middleware to handle various stages of the page load.
+			In past positions I have worked with AWS dev-ops tools and servers, Heroku build tools and Digital Ocean virtual machines. I am well versed in various build tools such as webpack as well as CI/CD tools such as Jenkins and the AWS Code Pipeline platform.  I have also worked with prebuilt and custom middleware to handle various stages of the page load.
 		</p>
 		<p>
-			In my free time I enjoy creating and maintaining IoT home automation devices paired with a custom home server software system.  I also manage numerous self hosted software systems on a home server cluster including a kubernetes instance that I use to further my software development life cycle skills.
+			In my free time I enjoy creating and maintaining IoT home automation devices paired with a custom home server software system.  I also manage numerous self hosted software systems on a home server cluster including a kubernetes instance that I use to further my software development life cycle and security skills.
 		</p>
 	</div>
 
-	<% if(hasProjects) { include('partials/projects') } %>
+	<% if (hasCertifications) { %>
+		<%- include('partials/certifications')  %>
+	<% } %>
 
-	<% if(hasCompanies) { include('partials/companies') } %>
+	<% if (hasProjects) { %>
+		<%- include('partials/projects')  %>
+	<% } %>
+
+	<% if (hasCompanies) { %>
+		<%- include('partials/companies')  %>
+	<% } %>
 
 	<%- include('partials/contact') %>
+
+	<div id='login'>
+		<button class='toggle-login'>Client Login</button>
+	</div>
 
 <%- include('partials/footer') %>

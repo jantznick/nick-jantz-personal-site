@@ -7,7 +7,6 @@ require('dotenv').config()
 app.set("view engine","ejs");
 app.use(express.static("public"));
 
-
 const menu = [
 	{
 		name: 'Home',
@@ -24,13 +23,17 @@ const menu = [
 ]
 
 const hasMenu = process.env.menu === 'true';
-const hasProjects = process.env.menu === 'true';
-const hasCompanies = process.env.menu === 'true';
+const hasProjects = process.env.projects === 'true';
+const hasCompanies = process.env.companies === 'true';
+const hasLogin = process.env.login === 'true';
+const hasCertifications = process.env.login === 'true';
 
 const getConfigData = (data) => {
 	return {
 		hasProjects,
 		hasCompanies,
+		hasLogin,
+		hasCertifications,
 		activePage: data.page,
 		menu: hasMenu ? menu : [],
 	}

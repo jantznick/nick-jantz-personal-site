@@ -5,7 +5,7 @@
 			I am a full-stack web developer with a focus on end-to-end dev ops processes and web application security. I specialize in optimizing codebases to have a robust architecture with simplistic scalability while maintaining high performance availability and comprehensive security without sacrificing user experiences.
 		</p>
 		<p>
-			I currently work at <a href="https://www.footlocker.com/" target="_blank" class="in-text-link">Foot Locker</a><img src="/external-link.svg" class="link-icon"> as a Software Engineer Team Lead on the international team working to ensure the current site architecture can handle migrating all European sites over to a new platform built in React/Redux and running on an Express server.  In the past I have also worked to revamp the checkout process to increase customer conversion.
+			I currently work at <a href="https://www.footlocker.com/" target="_blank" class="in-text-link">Foot Locker</a><img src="/external-link.svg" class="link-icon"> as a Senior Software Engineer Team Lead on the international team working to ensure the current site architecture can handle migrating all European sites over to a new platform built in React/Redux and running on an Express server.  In the past I have also worked to revamp the checkout process to increase customer conversion.
 		</p>
 		<p>
 			In past positions I have worked with AWS dev-ops tools and servers, Heroku build tools and Digital Ocean virtual machines. I am well versed in various build tools such as webpack as well as CI/CD tools such as Jenkins and the AWS Code Pipeline platform.  I have also worked with prebuilt and custom middleware to handle various stages of the page load.
@@ -29,8 +29,10 @@
 
 	<%- include('partials/contact') %>
 
-	<div id='login'>
-		<button class='toggle-login'>Client Login</button>
-	</div>
+	<% if (hasLogin) { %>
+		<div id='login'>
+			<button class='toggle-login'>Client Login</button>
+		</div>
+	<% } %>
 
 <%- include('partials/footer') %>
